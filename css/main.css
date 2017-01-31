@@ -1,0 +1,774 @@
+/*
+Theme Name: Firestarter 2.1 Working
+Theme URI: http://www.mccartin.info
+Author: John McCartin
+Author URI: http://mccartin.info/
+Description: An absolute bare-bones WordPress starter theme based on H5BP & Pure CSS
+Version: 2.0.0
+Tags: starter, h5bp, sass, pure
+
+No rights reserved.
+
+Workin in SASS.
+
+
+
+
+      ___           ___       ___       ___           ___     
+     /\  \         /\__\     /\__\     /\  \         |\__\    
+    /::\  \       /:/  /    /:/  /    /::\  \        |:|  |   
+   /:/\:\  \     /:/  /    /:/  /    /:/\:\  \       |:|  |   
+  /::\~\:\  \   /:/  /    /:/  /    /::\~\:\  \      |:|__|__ 
+ /:/\:\ \:\__\ /:/__/    /:/__/    /:/\:\ \:\__\     /::::\__\
+ \/__\:\/:/  / \:\  \    \:\  \    \:\~\:\ \/__/    /:/~~/~   
+      \::/  /   \:\  \    \:\  \    \:\ \:\__\     /:/  /     
+      /:/  /     \:\  \    \:\  \    \:\ \/__/     \/__/      
+     /:/  /       \:\__\    \:\__\    \:\__\                  
+     \/__/         \/__/     \/__/     \/__/                  
+     
+      ___           ___           ___           ___           ___     
+     /\__\         /\  \         /\__\         /\  \         /\  \    
+    /:/  /        /::\  \       /:/  /        /::\  \       /::\  \   
+   /:/__/        /:/\:\  \     /:/  /        /:/\ \  \     /:/\:\  \  
+  /::\  \ ___   /:/  \:\  \   /:/  /  ___   _\:\~\ \  \   /::\~\:\  \ 
+ /:/\:\  /\__\ /:/__/ \:\__\ /:/__/  /\__\ /\ \:\ \ \__\ /:/\:\ \:\__\
+ \/__\:\/:/  / \:\  \ /:/  / \:\  \ /:/  / \:\ \:\ \/__/ \:\~\:\ \/__/
+      \::/  /   \:\  /:/  /   \:\  /:/  /   \:\ \:\__\    \:\ \:\__\  
+      /:/  /     \:\/:/  /     \:\/:/  /     \:\/:/  /     \:\ \/__/  
+     /:/  /       \::/  /       \::/  /       \::/  /       \:\__\    
+     \/__/         \/__/         \/__/         \/__/         \/__/    
+
+
+http://www.alleyhouseestudio.com
+
+
+
+
+My simplistic attempts at
+												  
+	  _|_|      _|_|      _|_|_|    _|_|_|    _|_|_|  
+	_|    _|  _|    _|  _|        _|        _|        
+	_|    _|  _|    _|  _|          _|_|      _|_|    
+	_|    _|  _|    _|  _|              _|        _|  
+	  _|_|      _|_|      _|_|_|  _|_|_|    _|_|_|   
+			  
+breaking from that model for where need be.
+                                                 
+    
+    
+
+  /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+
+
+		
+
+		** Dependencies: Pure CSS (responsive rollup) http://purecss.io/
+		
+
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \__
+\ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / _
+ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ /  \ \____/ / 
+ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \__/ / __ \ \_
+
+
+
+                _       _     _           
+__   ____ _ _ __(_) __ _| |__ | | ___  ___ 
+\ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+ \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+  \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+
+*/
+/*
+
+ _                            _       
+(_)_ __ ___  _ __   ___  _ __| |_ ___ 
+| | '_ ` _ \| '_ \ / _ \| '__| __/ __|
+| | | | | | | |_) | (_) | |  | |_\__ \
+|_|_| |_| |_| .__/ \___/|_|   \__|___/
+            |_|                       
+*/
+/* line 1, ../sass/_border.scss */
+.border {
+  border-color: #666 !important;
+}
+
+/* line 5, ../sass/_border.scss */
+.border-mid {
+  border-color: #ddd !important;
+}
+
+/* line 10, ../sass/_border.scss */
+.border-1 {
+  border: 1px solid;
+}
+
+/* line 13, ../sass/_border.scss */
+.border-2 {
+  border: 2px solid;
+}
+
+/* line 16, ../sass/_border.scss */
+.border-4 {
+  border: 4px solid;
+}
+
+/* line 20, ../sass/_border.scss */
+.border-top-1 {
+  border-top: 1px solid;
+}
+
+/* line 23, ../sass/_border.scss */
+.border-top-2 {
+  border-top: 2px solid;
+}
+
+/* line 26, ../sass/_border.scss */
+.border-top-4 {
+  border-top: 4px solid;
+}
+
+/* line 30, ../sass/_border.scss */
+.border-bottom-1 {
+  border-bottom: 1px solid;
+}
+
+/* line 33, ../sass/_border.scss */
+.border-bottom-2 {
+  border-bottom: 2px solid;
+}
+
+/* line 36, ../sass/_border.scss */
+.border-bottom-4 {
+  border-bottom: 4px solid;
+}
+
+/* line 40, ../sass/_border.scss */
+.border-left-1 {
+  border-left: 1px solid;
+}
+
+/* line 43, ../sass/_border.scss */
+.border-left-2 {
+  border-left: 2px solid;
+}
+
+/* line 46, ../sass/_border.scss */
+.border-left-4 {
+  border-left: 4px solid;
+}
+
+/* line 50, ../sass/_border.scss */
+.border-right-1 {
+  border-right: 1px solid;
+}
+
+/* line 53, ../sass/_border.scss */
+.border-right-2 {
+  border-right: 2px solid;
+}
+
+/* line 56, ../sass/_border.scss */
+.border-right-4 {
+  border-right: 4px solid;
+}
+
+/* line 1, ../sass/_button.scss */
+.pure-button-primary {
+  background: #e6e6e6;
+  color: black;
+}
+
+/* line 6, ../sass/_button.scss */
+.pure-button:active {
+  box-shadow: none;
+}
+
+/* line 12, ../sass/_button.scss */
+.pure-button-active.pure-button-primary, .pure-button-active.pure-button-success, .pure-button-active.pure-button-error, .pure-button-active.pure-button-warning, .pure-button-active.pure-button-secondary, .pure-button-active.pure-button-dark {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+/* line 24, ../sass/_button.scss */
+.pure-button-active.pure-button-primary {
+  background: #0078e7;
+}
+/* line 28, ../sass/_button.scss */
+.pure-button-active.pure-button-success {
+  background: #1cb841;
+  /* this is a green */
+}
+/* line 32, ../sass/_button.scss */
+.pure-button-active.pure-button-error {
+  background: #ca3c3c;
+  /* this is a maroon */
+}
+/* line 36, ../sass/_button.scss */
+.pure-button-active.pure-button-warning {
+  background: #df7514;
+  /* this is an orange */
+}
+/* line 40, ../sass/_button.scss */
+.pure-button-active.pure-button-secondary {
+  background: #42b8dd;
+  /* this is a light blue */
+}
+/* line 43, ../sass/_button.scss */
+.pure-button-active.pure-button-dark {
+  background: #444;
+}
+
+/* line 53, ../sass/_button.scss */
+.pure-button-xxsmall {
+  font-size: 50%;
+}
+
+/* line 57, ../sass/_button.scss */
+.pure-button-xsmall {
+  font-size: 70%;
+}
+
+/* line 61, ../sass/_button.scss */
+.pure-button-small {
+  font-size: 85%;
+}
+
+/* line 65, ../sass/_button.scss */
+.pure-button-large {
+  font-size: 110%;
+}
+
+/* line 69, ../sass/_button.scss */
+.pure-button-xlarge {
+  font-size: 125%;
+}
+
+/* line 1, ../sass/_dark.scss */
+.pure-menu {
+  list-style: none;
+}
+
+/* line 5, ../sass/_dark.scss */
+.dark {
+  background: #222;
+  color: #fff;
+}
+/* line 13, ../sass/_dark.scss */
+.dark .border {
+  border-color: #fff;
+}
+/* line 17, ../sass/_dark.scss */
+.dark .pure-menu.pure-menu-open, .dark .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+/* line 22, ../sass/_dark.scss */
+.dark .pure-menu a, .dark .pure-menu .pure-menu-can-have-children > li:after {
+  color: #fff;
+}
+/* line 26, ../sass/_dark.scss */
+.dark .pure-menu li a {
+  padding: 5px 0px;
+}
+/* line 30, ../sass/_dark.scss */
+.dark .pure-menu li a:hover, .dark .pure-menu li a:focus {
+  color: #ddd;
+}
+/* line 36, ../sass/_dark.scss */
+.dark .pure-menu .sub-menu a {
+  color: #fff;
+  padding-left: 1em;
+}
+/* line 41, ../sass/_dark.scss */
+.dark .pure-menu .sub-menu li:hover > a {
+  color: #ddd;
+}
+/* line 45, ../sass/_dark.scss */
+.dark a {
+  color: #fff;
+}
+/* line 49, ../sass/_dark.scss */
+.dark a:hover {
+  color: #ddd;
+}
+
+/* line 56, ../sass/_dark.scss */
+.brand-title.dark {
+  background: #198DBC;
+}
+
+/* line 6, ../sass/_debug.scss */
+.debug {
+  border: 1px solid;
+}
+
+/* line 10, ../sass/_debug.scss */
+.debug-red {
+  border-color: red;
+}
+
+/* line 14, ../sass/_debug.scss */
+.debug-yellow {
+  border-color: yellow;
+}
+
+/* line 1, ../sass/_menu.scss */
+.nav-menu {
+  background: #666;
+}
+
+/* line 5, ../sass/_menu.scss */
+.pure-menu ul {
+  visibility: visible;
+  top: auto;
+  left: auto;
+  position: relative;
+}
+
+/* line 13, ../sass/_menu.scss */
+.pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+
+/* line 18, ../sass/_menu.scss */
+.pure-menu a, .pure-menu .pure-menu-can-have-children > li:after {
+  color: #222;
+}
+
+/* line 22, ../sass/_menu.scss */
+.pure-menu li a {
+  padding: 5px 0px;
+}
+
+/* line 26, ../sass/_menu.scss */
+.pure-menu li a:hover, .pure-menu li a:focus {
+  color: #222;
+  background: #198DBC;
+}
+
+/* line 2, ../sass/_mp.scss */
+.margin-1 {
+  margin: 1em;
+}
+
+/* line 6, ../sass/_mp.scss */
+.margin-2 {
+  margin: 2em;
+}
+
+/* line 10, ../sass/_mp.scss */
+.margin-4 {
+  margin: 4em;
+}
+
+/* line 14, ../sass/_mp.scss */
+.margin-top-1 {
+  margin-top: 1em;
+}
+
+/* line 18, ../sass/_mp.scss */
+.margin-top-2 {
+  margin-top: 2em;
+}
+
+/* line 22, ../sass/_mp.scss */
+.margin-top-4 {
+  margin-top: 4em;
+}
+
+/* line 26, ../sass/_mp.scss */
+.margin-bottom-1 {
+  margin-bottom: 1em;
+}
+
+/* line 30, ../sass/_mp.scss */
+.margin-bottom-2 {
+  margin-bottom: 2em;
+}
+
+/* line 34, ../sass/_mp.scss */
+.margin-bottom-4 {
+  margin-bottom: 4em;
+}
+
+/* line 38, ../sass/_mp.scss */
+.margin-right-1 {
+  margin-right: 1em;
+}
+
+/* line 42, ../sass/_mp.scss */
+.margin-right-2 {
+  margin-right: 2em;
+}
+
+/* line 46, ../sass/_mp.scss */
+.margin-right-4 {
+  margin-right: 4em;
+}
+
+/* line 50, ../sass/_mp.scss */
+.margin-left-1 {
+  margin-left: 1em;
+}
+
+/* line 54, ../sass/_mp.scss */
+.margin-left-2 {
+  margin-left: 2em;
+}
+
+/* line 58, ../sass/_mp.scss */
+.margin-left-4 {
+  margin-left: 4em;
+}
+
+/* line 62, ../sass/_mp.scss */
+.padding-1 {
+  padding: 1em;
+}
+
+/* line 66, ../sass/_mp.scss */
+.padding-2 {
+  padding: 2em;
+}
+
+/* line 70, ../sass/_mp.scss */
+.padding-4 {
+  padding: 4em;
+}
+
+/* line 74, ../sass/_mp.scss */
+.padding-top-1 {
+  padding-top: 1em;
+}
+
+/* line 78, ../sass/_mp.scss */
+.padding-top-2 {
+  padding-top: 2em;
+}
+
+/* line 82, ../sass/_mp.scss */
+.padding-top-4 {
+  padding-top: 4em;
+}
+
+/* line 86, ../sass/_mp.scss */
+.padding-bottom-1 {
+  padding-bottom: 1em;
+}
+
+/* line 90, ../sass/_mp.scss */
+.padding-bottom-2 {
+  padding-bottom: 2em;
+}
+
+/* line 94, ../sass/_mp.scss */
+.padding-bottom-4 {
+  padding-bottom: 4em;
+}
+
+/* line 98, ../sass/_mp.scss */
+.padding-right-1 {
+  padding-right: 1em;
+}
+
+/* line 102, ../sass/_mp.scss */
+.padding-right-2 {
+  padding-right: 2em;
+}
+
+/* line 106, ../sass/_mp.scss */
+.padding-right-4 {
+  padding-right: 4em;
+}
+
+/* line 110, ../sass/_mp.scss */
+.padding-left-1 {
+  padding-left: 1em;
+}
+
+/* line 114, ../sass/_mp.scss */
+.padding-left-2 {
+  padding-left: 2em;
+}
+
+/* line 118, ../sass/_mp.scss */
+.padding-left-4 {
+  padding-left: 4em;
+}
+
+/* line 123, ../sass/_mp.scss */
+.no-margin, .no-mp, .brand-title {
+  margin: 0;
+}
+
+/* line 127, ../sass/_mp.scss */
+.no-padding, .no-mp {
+  padding: 0;
+}
+
+/*
+@media screen and (min-width: $mobile-break) {
+
+	.md-padding-2 {
+		padding: 2em;
+	}
+
+
+}
+*/
+/* line 1, ../sass/_positioners.scss */
+.pull-down {
+  bottom: 0;
+}
+
+/* line 5, ../sass/_positioners.scss */
+.pull-right {
+  float: right;
+  right: 0;
+}
+
+/* line 10, ../sass/_positioners.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 15, ../sass/_positioners.scss */
+.stretch-lr {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* line 21, ../sass/_positioners.scss */
+.stretch-all {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* line 29, ../sass/_positioners.scss */
+.fixed {
+  position: fixed !important;
+}
+
+/* line 33, ../sass/_positioners.scss */
+.static {
+  position: static !important;
+}
+
+/* line 37, ../sass/_positioners.scss */
+.relative {
+  position: relative !important;
+}
+
+/* line 41, ../sass/_positioners.scss */
+.absolute {
+  position: absolute !important;
+}
+
+/* line 45, ../sass/_positioners.scss */
+.centered {
+  margin: 0px auto;
+}
+
+@media screen and (min-width: 48em) {
+  /* line 4, ../sass/_queries.scss */
+  .nav-menu {
+    background: transparent;
+  }
+
+  /* line 9, ../sass/_queries.scss */
+  .md-pull-down {
+    bottom: 0;
+  }
+
+  /* line 14, ../sass/_queries.scss */
+  .header {
+    position: fixed;
+  }
+
+  /* line 18, ../sass/_queries.scss */
+  .content {
+    padding-top: 2em;
+  }
+}
+/* line 1, ../sass/_text.scss */
+.text-centered {
+  text-align: center;
+}
+
+/* line 5, ../sass/_text.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 9, ../sass/_text.scss */
+.text-right {
+  text-align: right;
+}
+
+/*zs*/
+/* line 3, ../sass/_zs.scss */
+.top {
+  z-index: 99999;
+}
+
+/* line 7, ../sass/_zs.scss */
+.top-1 {
+  z-index: 99998;
+}
+
+/* line 11, ../sass/_zs.scss */
+.top-2 {
+  z-index: 99997;
+}
+
+/* line 17, ../sass/_zs.scss */
+.bottom {
+  z-index: -99999;
+}
+
+/* line 21, ../sass/_zs.scss */
+.bottom-1 {
+  z-index: -99998;
+}
+
+/* line 25, ../sass/_zs.scss */
+.bottom-2 {
+  z-index: -99997;
+}
+
+/* line 152, ../sass/main.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* line 158, ../sass/main.scss */
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  font-family: "Monotype Grotesque W01", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 163, ../sass/main.scss */
+::selection {
+  background: #198DBC;
+  color: #fff;
+}
+
+/* line 167, ../sass/main.scss */
+::-moz-selection {
+  background: #198DBC;
+  color: #fff;
+}
+
+/* line 172, ../sass/main.scss */
+body {
+  color: #222;
+}
+
+/* line 175, ../sass/main.scss */
+a {
+  color: #222;
+}
+
+/* line 179, ../sass/main.scss */
+a:hover {
+  background: #198DBC;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 185, ../sass/main.scss */
+.link-on-dark {
+  color: #fff;
+}
+
+/* line 189, ../sass/main.scss */
+.link-no-decor {
+  text-decoration: none;
+}
+
+/* line 193, ../sass/main.scss */
+h1, h2 {
+  font-family: "Sentinel A", "Sentinel B", Georgia, Palatino, serif;
+}
+
+/* line 198, ../sass/main.scss */
+.pure-g > div {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 205, ../sass/main.scss */
+.layout {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 210, ../sass/main.scss */
+.left-pane, .right-pane {
+  height: 100%;
+}
+
+/* line 214, ../sass/main.scss */
+.left-pane {
+  position: relative;
+  z-index: 100;
+  box-shadow: 1px 0px 7px -1px #333;
+}
+
+/* line 220, ../sass/main.scss */
+.right-pane {
+  z-index: 0;
+}
+
+/* line 226, ../sass/main.scss */
+.reader {
+  max-width: 800px;
+}
+
+/* line 234, ../sass/main.scss */
+.brand-title {
+  font-size: 2.3em;
+}
+
+/* line 240, ../sass/main.scss */
+.map-pane {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 245, ../sass/main.scss */
+.geom-hidden {
+  visibility: hidden;
+}
+
+/* line 250, ../sass/main.scss */
+.map-controls h3 {
+  margin-bottom: 0.5em;
+}

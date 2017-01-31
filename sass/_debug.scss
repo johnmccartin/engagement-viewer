@@ -1,0 +1,17 @@
+
+@mixin bordered {
+ border: 1px solid;
+ }
+
+.debug {
+	@include bordered;
+}
+
+.debug-red {
+  border-color: red;
+}
+
+.debug-yellow {
+  border-color: yellow
+}
+

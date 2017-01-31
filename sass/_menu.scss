@@ -1,0 +1,30 @@
+.nav-menu {
+  background: $mid-tone;
+}
+
+.pure-menu ul {
+  visibility: visible;
+  top: auto;
+  left: auto;
+  position: relative;
+}
+
+
+.pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
+  background: transparent;
+  border: 0px;
+}
+
+.pure-menu a, .pure-menu .pure-menu-can-have-children>li:after {
+  color: $primary-dark;
+}
+
+.pure-menu li a {
+  padding: 5px 0px;
+}
+
+.pure-menu li a:hover, .pure-menu li a:focus {
+  color: $primary-dark;
+  background: $highlight;
+}
+
