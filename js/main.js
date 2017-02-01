@@ -2,6 +2,7 @@
 $(document).ready(function(){
 	setSizes();
 	mapInit();
+	mobileControls();
 
 
 	$('.content img').addClass('pure-img');
@@ -316,3 +317,16 @@ L.Mask = L.Polygon.extend({
 L.mask = function (latLngs, options) {
 	return new L.Mask(latLngs, options);
 };
+
+
+function mobileControls() {
+	$(document).on('click','.reveal-mobile-filters',function(){
+		$('.mobile-map-controls').removeClass('not-revealed').addClass('revealed');
+	});
+
+	$(document).on('click','.mobile-map-controls span.close, .mobile-apply-filters',function(){
+		$('.mobile-map-controls').removeClass('revealed').addClass('not-revealed');
+	});
+
+
+}
