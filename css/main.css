@@ -734,46 +734,47 @@ h1, h2 {
   position: relative;
   z-index: 100;
   box-shadow: 1px 0px 7px -1px #333;
+  overflow: auto;
 }
 
-/* line 248, ../sass/main.scss */
+/* line 249, ../sass/main.scss */
 .right-pane {
   z-index: 0;
 }
 
-/* line 254, ../sass/main.scss */
+/* line 255, ../sass/main.scss */
 .reader {
   max-width: 650px;
   margin: 0px auto;
 }
 
-/* line 263, ../sass/main.scss */
+/* line 264, ../sass/main.scss */
 .brand-title {
   font-size: 2.3em;
 }
 
-/* line 269, ../sass/main.scss */
+/* line 270, ../sass/main.scss */
 .map-pane {
   width: 100%;
   height: calc(100vh - 2.5em);
 }
 
-/* line 274, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 .geom-hidden {
   visibility: hidden;
 }
 
-/* line 279, ../sass/main.scss */
+/* line 280, ../sass/main.scss */
 .map-controls h3 {
   margin-bottom: 0.5em;
 }
-/* line 283, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 .map-controls .pure-button-group button {
   margin-bottom: .5em;
   font-size: .8em;
 }
 
-/* line 290, ../sass/main.scss */
+/* line 291, ../sass/main.scss */
 .mobile-nav {
   height: 2.5em;
   box-shadow: 0px 1px 7px -1px #333;
@@ -781,20 +782,20 @@ h1, h2 {
   position: relative;
   background: #fff;
 }
-/* line 297, ../sass/main.scss */
+/* line 298, ../sass/main.scss */
 .mobile-nav a.image-link {
   margin: .5em 0 0 .5em;
 }
-/* line 301, ../sass/main.scss */
+/* line 302, ../sass/main.scss */
 .mobile-nav a.image-link .logo {
   height: calc(2.5em - 1em);
 }
-/* line 306, ../sass/main.scss */
+/* line 307, ../sass/main.scss */
 .mobile-nav a:last-of-type {
   margin: .65em .5em 0 0;
 }
 
-/* line 313, ../sass/main.scss */
+/* line 314, ../sass/main.scss */
 .reveal-mobile-filters {
   width: 3em;
   height: 3em;
@@ -803,13 +804,13 @@ h1, h2 {
   z-index: 800;
   background: #198DBC;
 }
-/* line 321, ../sass/main.scss */
+/* line 322, ../sass/main.scss */
 .reveal-mobile-filters svg {
   width: 50%;
   margin: .75em 0 0 .75em;
 }
 
-/* line 328, ../sass/main.scss */
+/* line 329, ../sass/main.scss */
 .mobile-map-controls {
   position: absolute;
   transition: all .4s ease;
@@ -817,16 +818,16 @@ h1, h2 {
   z-index: 801;
   left: 0;
 }
-/* line 336, ../sass/main.scss */
+/* line 337, ../sass/main.scss */
 .mobile-map-controls.not-revealed {
   top: 101%;
 }
-/* line 340, ../sass/main.scss */
+/* line 341, ../sass/main.scss */
 .mobile-map-controls.revealed {
   top: 0%;
 }
 
-/* line 346, ../sass/main.scss */
+/* line 347, ../sass/main.scss */
 .mobile-about-pane {
   position: absolute;
   transition: all .4s ease;
@@ -836,32 +837,33 @@ h1, h2 {
   background: #198DBC;
   color: #fff;
 }
-/* line 355, ../sass/main.scss */
+/* line 356, ../sass/main.scss */
 .mobile-about-pane a {
   color: #fff;
 }
-/* line 360, ../sass/main.scss */
+/* line 361, ../sass/main.scss */
 .mobile-about-pane.not-revealed {
   top: 101%;
 }
-/* line 364, ../sass/main.scss */
+/* line 365, ../sass/main.scss */
 .mobile-about-pane.revealed {
   top: 0%;
 }
 
-/* line 371, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 .drop-shadow {
   box-shadow: 0 0 10px 0 #666;
 }
 
-/* line 375, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 .text-fix {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: "Monotype Grotesque W01", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 382, ../sass/main.scss */
+/* line 384, ../sass/main.scss */
 .pointer {
   cursor: pointer;
 }
@@ -913,48 +915,49 @@ h1, h2 {
     height: 100%;
   }
 
-  /* line 42, ../sass/_queries.scss */
-  .left-pane .about-pane {
+  /* line 44, ../sass/_queries.scss */
+  .desktop-about-pane {
     background: #198DBC;
     color: #fff;
     transition: all .4s ease;
     box-sizing: border-box;
     font-size: 2em;
+    z-index: 800;
     left: 0;
   }
-  /* line 49, ../sass/_queries.scss */
-  .left-pane .about-pane a {
+  /* line 52, ../sass/_queries.scss */
+  .desktop-about-pane a {
     color: #fff;
   }
-  /* line 53, ../sass/_queries.scss */
-  .left-pane .about-pane span.close {
+  /* line 56, ../sass/_queries.scss */
+  .desktop-about-pane span.close {
     font-size: .5em;
   }
-  /* line 59, ../sass/_queries.scss */
-  .left-pane .about-pane.not-revealed {
+  /* line 62, ../sass/_queries.scss */
+  .desktop-about-pane.not-revealed {
     top: 101%;
   }
-  /* line 63, ../sass/_queries.scss */
-  .left-pane .about-pane.revealed {
+  /* line 66, ../sass/_queries.scss */
+  .desktop-about-pane.revealed {
     top: 0;
   }
 
-  /* line 70, ../sass/_queries.scss */
+  /* line 72, ../sass/_queries.scss */
   .right-pane {
     margin-top: 0;
     position: static;
   }
 
-  /* line 75, ../sass/_queries.scss */
+  /* line 77, ../sass/_queries.scss */
   .map-pane {
     height: 100vh;
   }
 
-  /* line 80, ../sass/_queries.scss */
+  /* line 82, ../sass/_queries.scss */
   .map-controls .pure-button-group button {
     font-size: 1em;
   }
-  /* line 85, ../sass/_queries.scss */
+  /* line 87, ../sass/_queries.scss */
   .map-controls .pure-button-group:last-of-type button {
     display: block;
   }

@@ -39,12 +39,15 @@
 	}
 
 	.left-pane {
-		.about-pane {
+		
+	}
+	.desktop-about-pane {
 			background: $highlight;
 			color: $primary-light;
 			transition: all .4s ease;
 			box-sizing: border-box;
 			font-size: 2em;
+			z-index: 800;
 
 			a {
 				color: $primary-light;
@@ -65,7 +68,6 @@
 			}
 
 		}
-	}
 
 	.right-pane {
 		margin-top: 0;
