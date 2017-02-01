@@ -684,7 +684,7 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* line 168, ../sass/main.scss */
@@ -821,5 +821,32 @@ h1, h2 {
 }
 /* line 291, ../sass/main.scss */
 .mobile-nav a:last-of-type {
-  margin: .5em .5em 0 0;
+  margin: .65em .5em 0 0;
+}
+
+/* line 297, ../sass/main.scss */
+.filter-button {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  position: relative;
+  z-index: 400;
+  background: #198DBC;
+}
+/* line 305, ../sass/main.scss */
+.filter-button svg {
+  width: 50%;
+  margin: .75em 0 0 .75em;
+}
+
+/* line 311, ../sass/main.scss */
+.drop-shadow {
+  box-shadow: 0 0 10px 0 #666;
+}
+
+/* line 315, ../sass/main.scss */
+.text-fix {
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
 }

@@ -162,7 +162,7 @@ $box-shadow-bottom: 0px 1px 7px -1px #333;
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html, button, input, select, textarea,
@@ -289,7 +289,31 @@ h1,h2 {
   }
 
   a:last-of-type {
-    margin: .5em .5em 0 0;
+    margin: .65em .5em 0 0;
   }
   
+}
+
+.filter-button {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  position: relative;
+  z-index: 400;
+  background: $highlight;
+
+  svg {
+    width: 50%;
+    margin: .75em 0 0 .75em;
+  }
+}
+
+.drop-shadow {
+  box-shadow: 0 0 10px 0 #666;
+}
+
+.text-fix {
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-rendering: auto;
 }
