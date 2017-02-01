@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+	fire.zoom_init = 14;
 	setSizes();
 	mapInit();
 	mobileControls();
@@ -38,6 +39,12 @@ $(document).ready(function(){
 function setSizes() {
 	var winW = $(window).width();
 	var winH = $(window).height();
+
+	if(winW < 600) {
+		fire.zoom_init = 13
+	} else {
+		fire.zoom_init = 13
+	}
 	
 	/*
 	var postsW = $(".posts").width();
@@ -65,7 +72,7 @@ function mapInit() {
 
 	var map = L.map('map',{
 		attributionControl: false
-	}).setView([42.3751,-71.1056],14);
+	}).setView([42.3751,-71.1056],fire.zoom_init);
 
 	var tiles = new L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png', {
 			maxZoom: 18,
