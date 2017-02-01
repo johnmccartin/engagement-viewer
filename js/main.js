@@ -43,7 +43,7 @@ function setSizes() {
 	if(winW < 600) {
 		fire.zoom_init = 13
 	} else {
-		fire.zoom_init = 13
+		fire.zoom_init = 14
 	}
 	
 	/*
