@@ -7,6 +7,13 @@ $(document).ready(function(){
 
 	$('.content img').addClass('pure-img');
 
+	$(document).on('click','.left-pane .reveal-about',function(){
+		$('.left-pane .about-pane').removeClass('not-revealed').addClass('revealed');
+	});
+	$(document).on('click','.left-pane .about-pane .close',function(){
+		$('.left-pane .about-pane').removeClass('revealed').addClass('not-revealed');
+	})
+
 
 
 

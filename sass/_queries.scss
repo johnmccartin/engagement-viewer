@@ -38,6 +38,35 @@
 	  height: 100%;
 	}
 
+	.left-pane {
+		.about-pane {
+			background: $highlight;
+			color: $primary-light;
+			transition: all .4s ease;
+			box-sizing: border-box;
+			font-size: 2em;
+
+			a {
+				color: $primary-light;
+			}
+
+			span.close {
+				font-size: .5em;
+			}
+
+			left: 0;
+
+			&.not-revealed {
+				top: 101%;
+			}
+
+			&.revealed {
+				top: 0;
+			}
+
+		}
+	}
+
 	.right-pane {
 		margin-top: 0;
 		position: static;
@@ -45,6 +74,18 @@
 
 	.map-pane {
 		height: 100vh;
+	}
+
+	.map-controls {
+		.pure-button-group button {
+			font-size: 1em;
+		}
+
+		.pure-button-group:last-of-type {
+		    button {
+		      display: block;
+		    }
+		  }
 	}
 
 }

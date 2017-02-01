@@ -743,31 +743,37 @@ h1, h2 {
 
 /* line 254, ../sass/main.scss */
 .reader {
-  max-width: 800px;
+  max-width: 650px;
+  margin: 0px auto;
 }
 
-/* line 262, ../sass/main.scss */
+/* line 263, ../sass/main.scss */
 .brand-title {
   font-size: 2.3em;
 }
 
-/* line 268, ../sass/main.scss */
+/* line 269, ../sass/main.scss */
 .map-pane {
   width: 100%;
   height: calc(100vh - 2.5em);
 }
 
-/* line 273, ../sass/main.scss */
+/* line 274, ../sass/main.scss */
 .geom-hidden {
   visibility: hidden;
 }
 
-/* line 278, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 .map-controls h3 {
   margin-bottom: 0.5em;
 }
-
 /* line 283, ../sass/main.scss */
+.map-controls .pure-button-group button {
+  margin-bottom: .5em;
+  font-size: .8em;
+}
+
+/* line 290, ../sass/main.scss */
 .mobile-nav {
   height: 2.5em;
   box-shadow: 0px 1px 7px -1px #333;
@@ -775,20 +781,20 @@ h1, h2 {
   position: relative;
   background: #fff;
 }
-/* line 290, ../sass/main.scss */
+/* line 297, ../sass/main.scss */
 .mobile-nav a.image-link {
   margin: .5em 0 0 .5em;
 }
-/* line 294, ../sass/main.scss */
+/* line 301, ../sass/main.scss */
 .mobile-nav a.image-link .logo {
   height: calc(2.5em - 1em);
 }
-/* line 299, ../sass/main.scss */
+/* line 306, ../sass/main.scss */
 .mobile-nav a:last-of-type {
   margin: .65em .5em 0 0;
 }
 
-/* line 306, ../sass/main.scss */
+/* line 313, ../sass/main.scss */
 .reveal-mobile-filters {
   width: 3em;
   height: 3em;
@@ -797,13 +803,13 @@ h1, h2 {
   z-index: 800;
   background: #198DBC;
 }
-/* line 314, ../sass/main.scss */
+/* line 321, ../sass/main.scss */
 .reveal-mobile-filters svg {
   width: 50%;
   margin: .75em 0 0 .75em;
 }
 
-/* line 321, ../sass/main.scss */
+/* line 328, ../sass/main.scss */
 .mobile-map-controls {
   position: absolute;
   transition: all .4s ease;
@@ -811,16 +817,16 @@ h1, h2 {
   z-index: 801;
   left: 0;
 }
-/* line 329, ../sass/main.scss */
+/* line 336, ../sass/main.scss */
 .mobile-map-controls.not-revealed {
   top: 101%;
 }
-/* line 333, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 .mobile-map-controls.revealed {
   top: 0%;
 }
 
-/* line 339, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 .mobile-about-pane {
   position: absolute;
   transition: all .4s ease;
@@ -830,32 +836,32 @@ h1, h2 {
   background: #198DBC;
   color: #fff;
 }
-/* line 348, ../sass/main.scss */
+/* line 355, ../sass/main.scss */
 .mobile-about-pane a {
   color: #fff;
 }
-/* line 353, ../sass/main.scss */
+/* line 360, ../sass/main.scss */
 .mobile-about-pane.not-revealed {
   top: 101%;
 }
-/* line 357, ../sass/main.scss */
+/* line 364, ../sass/main.scss */
 .mobile-about-pane.revealed {
   top: 0%;
 }
 
-/* line 364, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 .drop-shadow {
   box-shadow: 0 0 10px 0 #666;
 }
 
-/* line 368, ../sass/main.scss */
+/* line 375, ../sass/main.scss */
 .text-fix {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
 }
 
-/* line 375, ../sass/main.scss */
+/* line 382, ../sass/main.scss */
 .pointer {
   cursor: pointer;
 }
@@ -907,14 +913,49 @@ h1, h2 {
     height: 100%;
   }
 
-  /* line 41, ../sass/_queries.scss */
+  /* line 42, ../sass/_queries.scss */
+  .left-pane .about-pane {
+    background: #198DBC;
+    color: #fff;
+    transition: all .4s ease;
+    box-sizing: border-box;
+    font-size: 2em;
+    left: 0;
+  }
+  /* line 49, ../sass/_queries.scss */
+  .left-pane .about-pane a {
+    color: #fff;
+  }
+  /* line 53, ../sass/_queries.scss */
+  .left-pane .about-pane span.close {
+    font-size: .5em;
+  }
+  /* line 59, ../sass/_queries.scss */
+  .left-pane .about-pane.not-revealed {
+    top: 101%;
+  }
+  /* line 63, ../sass/_queries.scss */
+  .left-pane .about-pane.revealed {
+    top: 0;
+  }
+
+  /* line 70, ../sass/_queries.scss */
   .right-pane {
     margin-top: 0;
     position: static;
   }
 
-  /* line 46, ../sass/_queries.scss */
+  /* line 75, ../sass/_queries.scss */
   .map-pane {
     height: 100vh;
+  }
+
+  /* line 80, ../sass/_queries.scss */
+  .map-controls .pure-button-group button {
+    font-size: 1em;
+  }
+  /* line 85, ../sass/_queries.scss */
+  .map-controls .pure-button-group:last-of-type button {
+    display: block;
   }
 }
