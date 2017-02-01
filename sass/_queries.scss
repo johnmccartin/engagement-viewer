@@ -1,4 +1,12 @@
+.mobile-only {
+	display: block;
+}
 
+.not-mobile {
+	display: none;
+}
+
+/* LARGER THAN MOBILE */
 @media screen and (min-width: 48em) {
 
 	.nav-menu {
@@ -19,7 +27,11 @@
 	  padding-top: 2em;
 	}
 
-	
-	
+	.mobile-only {
+		display: none;
+	}
+	.not-mobile {
+		display: block;
+	}
 
 }

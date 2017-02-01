@@ -592,25 +592,46 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
   margin: 0px auto;
 }
 
+/* line 1, ../sass/_queries.scss */
+.mobile-only {
+  display: block;
+}
+
+/* line 5, ../sass/_queries.scss */
+.not-mobile {
+  display: none;
+}
+
+/* LARGER THAN MOBILE */
 @media screen and (min-width: 48em) {
-  /* line 4, ../sass/_queries.scss */
+  /* line 12, ../sass/_queries.scss */
   .nav-menu {
     background: transparent;
   }
 
-  /* line 9, ../sass/_queries.scss */
+  /* line 17, ../sass/_queries.scss */
   .md-pull-down {
     bottom: 0;
   }
 
-  /* line 14, ../sass/_queries.scss */
+  /* line 22, ../sass/_queries.scss */
   .header {
     position: fixed;
   }
 
-  /* line 18, ../sass/_queries.scss */
+  /* line 26, ../sass/_queries.scss */
   .content {
     padding-top: 2em;
+  }
+
+  /* line 30, ../sass/_queries.scss */
+  .mobile-only {
+    display: none;
+  }
+
+  /* line 33, ../sass/_queries.scss */
+  .not-mobile {
+    display: block;
   }
 }
 /* line 1, ../sass/_text.scss */
@@ -659,64 +680,74 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
   z-index: -99997;
 }
 
-/* line 152, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
 }
 
-/* line 158, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   font-family: "Monotype Grotesque W01", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 163, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 ::selection {
   background: #198DBC;
   color: #fff;
 }
 
-/* line 167, ../sass/main.scss */
+/* line 177, ../sass/main.scss */
 ::-moz-selection {
   background: #198DBC;
   color: #fff;
 }
 
-/* line 172, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 body {
   color: #222;
 }
 
-/* line 175, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 a {
   color: #222;
 }
 
-/* line 179, ../sass/main.scss */
+/* line 189, ../sass/main.scss */
 a:hover {
   background: #198DBC;
   color: #fff;
   text-decoration: none;
 }
 
-/* line 185, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 .link-on-dark {
   color: #fff;
 }
 
-/* line 189, ../sass/main.scss */
+/* line 199, ../sass/main.scss */
 .link-no-decor {
   text-decoration: none;
 }
 
-/* line 193, ../sass/main.scss */
+/* line 203, ../sass/main.scss */
+.image-link {
+  text-decoration: none;
+}
+/* line 207, ../sass/main.scss */
+.image-link:hover {
+  background: transparent;
+  color: none;
+}
+
+/* line 214, ../sass/main.scss */
 h1, h2 {
   font-family: "Sentinel A", "Sentinel B", Georgia, Palatino, serif;
 }
 
-/* line 198, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .pure-g > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -724,51 +755,71 @@ h1, h2 {
   box-sizing: border-box;
 }
 
-/* line 205, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 .layout {
   min-height: 100%;
   position: relative;
 }
 
-/* line 210, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 .left-pane, .right-pane {
   height: 100%;
 }
 
-/* line 214, ../sass/main.scss */
+/* line 235, ../sass/main.scss */
 .left-pane {
   position: relative;
   z-index: 100;
   box-shadow: 1px 0px 7px -1px #333;
 }
 
-/* line 220, ../sass/main.scss */
+/* line 241, ../sass/main.scss */
 .right-pane {
   z-index: 0;
 }
 
-/* line 226, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 .reader {
   max-width: 800px;
 }
 
-/* line 234, ../sass/main.scss */
+/* line 255, ../sass/main.scss */
 .brand-title {
   font-size: 2.3em;
 }
 
-/* line 240, ../sass/main.scss */
+/* line 261, ../sass/main.scss */
 .map-pane {
   width: 100%;
   height: 100%;
 }
 
-/* line 245, ../sass/main.scss */
+/* line 266, ../sass/main.scss */
 .geom-hidden {
   visibility: hidden;
 }
 
-/* line 250, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 .map-controls h3 {
   margin-bottom: 0.5em;
+}
+
+/* line 276, ../sass/main.scss */
+.mobile-nav {
+  height: 2.5em;
+  box-shadow: 0px 1px 7px -1px #333;
+  z-index: 100;
+  position: relative;
+}
+/* line 282, ../sass/main.scss */
+.mobile-nav a.image-link {
+  margin: .5em 0 0 .5em;
+}
+/* line 286, ../sass/main.scss */
+.mobile-nav a.image-link .logo {
+  height: calc(2.5em - 1em);
+}
+/* line 291, ../sass/main.scss */
+.mobile-nav a:last-of-type {
+  margin: .5em .5em 0 0;
 }
