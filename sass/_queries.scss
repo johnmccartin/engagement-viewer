@@ -42,6 +42,7 @@
 		
 	}
 	.desktop-about-pane {
+			display: block;
 			background: $highlight;
 			color: $primary-light;
 			transition: all .4s ease;

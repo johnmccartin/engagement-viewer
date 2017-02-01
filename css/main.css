@@ -868,6 +868,11 @@ h1, h2 {
   cursor: pointer;
 }
 
+/* line 388, ../sass/main.scss */
+.desktop-about-pane {
+  display: none;
+}
+
 /* line 1, ../sass/_queries.scss */
 .mobile-only {
   display: block;
@@ -917,6 +922,7 @@ h1, h2 {
 
   /* line 44, ../sass/_queries.scss */
   .desktop-about-pane {
+    display: block;
     background: #198DBC;
     color: #fff;
     transition: all .4s ease;
@@ -925,39 +931,39 @@ h1, h2 {
     z-index: 800;
     left: 0;
   }
-  /* line 52, ../sass/_queries.scss */
+  /* line 53, ../sass/_queries.scss */
   .desktop-about-pane a {
     color: #fff;
   }
-  /* line 56, ../sass/_queries.scss */
+  /* line 57, ../sass/_queries.scss */
   .desktop-about-pane span.close {
     font-size: .5em;
   }
-  /* line 62, ../sass/_queries.scss */
+  /* line 63, ../sass/_queries.scss */
   .desktop-about-pane.not-revealed {
     top: 101%;
   }
-  /* line 66, ../sass/_queries.scss */
+  /* line 67, ../sass/_queries.scss */
   .desktop-about-pane.revealed {
     top: 0;
   }
 
-  /* line 72, ../sass/_queries.scss */
+  /* line 73, ../sass/_queries.scss */
   .right-pane {
     margin-top: 0;
     position: static;
   }
 
-  /* line 77, ../sass/_queries.scss */
+  /* line 78, ../sass/_queries.scss */
   .map-pane {
     height: 100vh;
   }
 
-  /* line 82, ../sass/_queries.scss */
+  /* line 83, ../sass/_queries.scss */
   .map-controls .pure-button-group button {
     font-size: 1em;
   }
-  /* line 87, ../sass/_queries.scss */
+  /* line 88, ../sass/_queries.scss */
   .map-controls .pure-button-group:last-of-type button {
     display: block;
   }
