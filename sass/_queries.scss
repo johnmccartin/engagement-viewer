@@ -34,4 +34,13 @@
 		display: block;
 	}
 
+	.left-pane, .right-pane {
+	  height: 100%;
+	}
+
+	.right-pane {
+		margin-top: 0;
+		position: static;
+	}
+
 }

@@ -328,5 +328,15 @@ function mobileControls() {
 		$('.mobile-map-controls').removeClass('revealed').addClass('not-revealed');
 	});
 
+	$(document).on('click','.mobile-nav .reveal-about',function(){
+		$('.mobile-about-pane').removeClass('not-revealed').addClass('revealed');
+	});
+
+	$(document).on('click','.mobile-about-pane span.close',function(){
+		$('.mobile-about-pane').removeClass('revealed').addClass('not-revealed');
+	});
+
+
+
 
 }

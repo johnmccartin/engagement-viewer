@@ -10,7 +10,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -46,17 +47,17 @@
 
         <div class="layout pure-g stretch-all">
 
-            <div class="top-nav mobile-nav mobile-only pure-u-1 top">
+            <div class="top-nav mobile-nav mobile-only pure-u-1 top fixed">
                 <a href="http://envision.cambridgema.gov" class="pull-left image-link"><img src="img/logo-horizontal.png" class="pure-img logo" /></a>
-                <a href="#" class="pull-right">About</a>
+                <a href="#" class="pull-right reveal-about pointer">About</a>
             </div>
 
             <div class="left-pane pure-u-1 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 padding-2 not-mobile">
                 <a href="http://envision.cambridgema.gov"><img src="img/logo.png" class="pure-img" /></a>
                 <h1>Engagement Data</h1>
-                <a href="#">About</a>
+                <a href="#" class="reveal-about">About</a>
                 <div class="about-pane hidden">
-                     <p>Envision Cambridge spent its first year collecting feedback using our <a href="#">Mobile Engagement Station</a>.</p>
+                    <p><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our <a href="#">Mobile Engagement Station</a>.</p>
                     <p>During the Listening Phase, we asked participants to mark their favorite and least favorite places, and where they would like to see change in the future. During the Visioning Phase, we asked participants to mark where they envision change for a better future.</p>
                 </div>
                
@@ -88,7 +89,7 @@
                 <div class="map-pane" id="map"></div>
             </div>
 
-            <div class="reveal-mobile-filters pull-down pull-right mobile-only fixed text-fix margin-1 drop-shadow">
+            <div class="reveal-mobile-filters pull-down pull-right mobile-only fixed text-fix margin-1 drop-shadow pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 971.986 971.986" style="enable-background:new 0 0 971.986 971.986;" xml:space="preserve">
                     <g>
                         <path d="M370.216,459.3c10.2,11.1,15.8,25.6,15.8,40.6v442c0,26.601,32.1,40.101,51.1,21.4l123.3-141.3   c16.5-19.8,25.6-29.601,25.6-49.2V500c0-15,5.7-29.5,15.8-40.601L955.615,75.5c26.5-28.8,6.101-75.5-33.1-75.5h-873   c-39.2,0-59.7,46.6-33.1,75.5L370.216,459.3z" fill="#FFFFFF"/>
@@ -96,8 +97,14 @@
                 </svg>
             </div>
 
+            <div class="mobile-about-pane not-revealed padding-1 mobile-only text-fix stretch-all">
+                    <span class="pull-right close pointer">Close</span>
+                    <p class="margin-top-2"><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our <a href="#">Mobile Engagement Station</a>.</p>
+                    <p>During the Listening Phase, we asked participants to mark their favorite and least favorite places, and where they would like to see change in the future. During the Visioning Phase, we asked participants to mark where they envision change for a better future.</p>
+            </div>
+
             <div class="map-controls mobile-map-controls not-revealed padding-1 mobile-only text-fix stretch-all">
-                    <span class="pull-right close">Close</span>
+                    <span class="pull-right close pointer">Close</span>
 
                     <h3 class="margin-top-1">Filter data by phase</h3>
                     <div class="pure-button-group margin-bottom-2" role="group">
@@ -118,7 +125,7 @@
                             <button class="pure-button pure-button-active pure-button-primary filter-types" data-filter="future">Future</button>
                     </div>
 
-                    <button class="mobile-apply-filters pure-button pure-button-xlarge margin-top-4 pull-right">Apply</button>
+                    <button class="mobile-apply-filters pure-button pure-button-xlarge margin-top-2 pull-right">Apply</button>
 
 
             </div><!-- /mobile-map-controls -->

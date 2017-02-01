@@ -153,7 +153,6 @@ $box-shadow-bottom: 0px 1px 7px -1px #333;
 @import 'menu';
 @import 'mp';
 @import 'positioners';
-@import 'queries';
 @import 'text';
 @import 'zs';
 
@@ -163,6 +162,9 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 html, button, input, select, textarea,
@@ -226,10 +228,15 @@ h1,h2 {
 .layout {
   min-height: 100%;
   position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.left-pane, .right-pane {
-  height: 100%;
+.right-pane {
+  height: calc(100vh - #{$mobile-header-height});
+  margin-top: $mobile-header-height;
+  position: fixed;
 }
 
 .left-pane {
@@ -260,7 +267,7 @@ h1,h2 {
 
 .map-pane {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - #{$mobile-header-height});
 }
 
 .geom-hidden {
@@ -276,8 +283,9 @@ h1,h2 {
 .mobile-nav {
   height: $mobile-header-height;
   box-shadow: $box-shadow-bottom;
-  z-index: 100;
+  z-index: 800;
   position: relative;
+  background: $primary-light;
 
   a.image-link {
 
@@ -294,12 +302,13 @@ h1,h2 {
   
 }
 
+
 .reveal-mobile-filters {
   width: 3em;
   height: 3em;
   border-radius: 50%;
   position: relative;
-  z-index: 400;
+  z-index: 800;
   background: $highlight;
 
   svg {
@@ -313,7 +322,32 @@ h1,h2 {
   position: absolute;
   transition: all .4s ease;
   background: $primary-light;
-  z-index: 401;
+  z-index: 801;
+  left: 0;
+  
+
+  &.not-revealed {
+    top: 101%;
+  }
+
+  &.revealed {
+    top: 0%;
+  }
+}
+
+
+.mobile-about-pane {
+  position: absolute;
+  transition: all .4s ease;
+  background: $primary-light;
+  z-index: 801;
+  left: 0;
+  background: $highlight;
+  color: $primary-light;
+
+  a {
+    color: $primary-light
+  }
   
 
   &.not-revealed {
@@ -336,3 +370,12 @@ h1,h2 {
     word-spacing: normal;
     text-rendering: auto;
 }
+
+
+.pointer {
+  cursor: pointer;
+}
+
+
+
+@import 'queries';
