@@ -154,6 +154,7 @@ $box-shadow-bottom: 0px 1px 7px -1px #333;
 @import 'mp';
 @import 'positioners';
 @import 'text';
+@import 'toggle';
 @import 'zs';
 
 
@@ -325,7 +326,11 @@ h1,h2 {
   }
 }
 
-
+.map-controls {
+  input {
+        margin-right: .75em;
+  }
+}
 .mobile-map-controls {
   position: absolute;
   transition: all .4s ease;

@@ -265,6 +265,9 @@ function controlTheMap() {
 
 		var filter_value = $t.attr('data-filter');
 
+		var $checkbox = $t.parent().find('input');
+		$checkbox.prop('checked',!$checkbox.prop('checked'));
+
 
 		//TURNING OFF
 		if($t.hasClass('pure-button-active')) {

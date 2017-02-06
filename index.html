@@ -52,10 +52,10 @@
                 <a href="#" class="pull-right reveal-about pointer">About</a>
             </div>
 
-            <div class="left-pane pure-u-1 pure-u-md-1-3 pure-u-lg-1-4 padding-2 not-mobile">
+            <div class="left-pane stretch-tb pure-u-1 pure-u-md-1-3 pure-u-lg-1-4 padding-2 not-mobile">
                 <a href="http://envision.cambridgema.gov"><img src="img/logo.png" class="pure-img" /></a>
                 <h1>Engagement Data</h1>
-                <a href="#" class="reveal-about">About</a>
+                <a href="#" class="reveal-about">What is this data?</a>
                 
                
 
@@ -70,17 +70,24 @@
 
                     <h3>Filter Listening Phase data by feedback type</h3>
                      <div class="pure-button-group" role="group">
-                            <button class="pure-button pure-button-active pure-button-success filter-types" data-filter="favorite">Favorite</button>
-                            <button class="pure-button pure-button-active pure-button-error filter-types" data-filter="least-favorite">Least Favorite</button>
-                            <button class="pure-button pure-button-active pure-button-primary filter-types" data-filter="future">Future</button>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-success filter-types" data-filter="favorite">Current Favorite</button></div>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-error filter-types" data-filter="least-favorite">Current Least Favorite</button></div>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-primary filter-types" data-filter="future">Future Change</button></div>
                     </div>
 
                     <h3>Filter data by geometry</h3>
                     <div class="pure-button-group margin-bottom-2" role="group">
-                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="point">Points</button>
-                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="area">Areas</button>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="point">Points</button></div>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="area">Areas</button></div>
                     </div>
                     
+                </div>
+
+                <div class="qualifications pull-down absolute padding-bottom-2">
+                    <p>See all the data at Cambridge's <a href="http://data.cambridgema.gov/">Open Data portal</a>.</p>
+                    <small>
+                        Note: not all participants included comments.
+                    </small>
                 </div>
             </div>
 
@@ -103,36 +110,37 @@
 
                     <div class="reader">
                         <p class="margin-top-2"><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our <a href="#">Mobile Engagement Station</a>.</p>
-                        <p>During the Listening Phase, we asked participants to mark their favorite and least favorite places, and where they would like to see change in the future. During the Visioning Phase, we asked participants to mark where they envision change for a better future.</p>
+                        <p>We asked participants to mark their favorite and least favorite places, and where they would like to see change in the future.</p>
                     </div>
             </div>
 
             <div class="mobile-about-pane not-revealed padding-1 mobile-only text-fix stretch-all">
                     <span class="pull-right close pointer">Close</span>
                     <p class="margin-top-2"><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our <a href="#">Mobile Engagement Station</a>.</p>
-                    <p>During the Listening Phase, we asked participants to mark their favorite and least favorite places, and where they would like to see change in the future. During the Visioning Phase, we asked participants to mark where they envision change for a better future.</p>
+                        <p>We asked participants to mark their favorite and least favorite places, and where they would like to see change in the future.</p>
             </div>
 
             <div class="map-controls mobile-map-controls not-revealed padding-1 mobile-only text-fix stretch-all">
                     <span class="pull-right close pointer">Close</span>
-
+                    <!--
                     <h3 class="margin-top-1">Filter data by phase</h3>
                     <div class="pure-button-group margin-bottom-2" role="group">
                             <button class="pure-button pure-button-active pure-button-dark filter-phases" data-filter="listening">Listening</button>
                             <button class="pure-button pure-button-active pure-button-dark filter-phases" data-filter="visioning">Visioning</button>
                     </div>
-
-                    <h3>Filter data by geometry</h3>
-                    <div class="pure-button-group margin-bottom-2" role="group">
-                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="point">Points</button>
-                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="area">Areas</button>
-                    </div>
+                    -->
 
                     <h3>Filter Listening Phase data by feedback type</h3>
                      <div class="pure-button-group" role="group">
-                            <button class="pure-button pure-button-active pure-button-success filter-types" data-filter="favorite">Favorite</button>
-                            <button class="pure-button pure-button-active pure-button-error filter-types" data-filter="least-favorite">Least Favorite</button>
-                            <button class="pure-button pure-button-active pure-button-primary filter-types" data-filter="future">Future</button>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-success filter-types" data-filter="favorite">Current Favorite</button></div>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-error filter-types" data-filter="least-favorite">Current Least Favorite</button></div>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-primary filter-types" data-filter="future">Future Change</button></div>
+                    </div>
+
+                    <h3>Filter data by geometry</h3>
+                    <div class="pure-button-group margin-bottom-2" role="group">
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="point">Points</button></div>
+                            <div class="single-filter"><input type="checkbox" checked disabled><button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="area">Areas</button></div>
                     </div>
 
                     <button class="mobile-apply-filters pure-button pure-button-xlarge margin-top-2 pull-right">Apply</button>
