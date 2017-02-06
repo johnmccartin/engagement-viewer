@@ -225,8 +225,9 @@ function mapInit() {
 	map.addLayer(tiles);
 	map.addLayer(cambridge_bounds);
 	map.addLayer(listening_polygons);
-	map.addLayer(listening_points);
-	map.addLayer(visioning_points);
+	//map.addLayer(listening_points);
+	//map.addLayer(visioning_points);
+	map.addLayer(engagement_points);
 
 	map.createPane('labels');
 	map.getPane('labels').style.zIndex = 650;

@@ -60,17 +60,13 @@
                
 
                 <div class="map-controls margin-top-2">
+                    <!--
                     <h3>Filter data by phase</h3>
                     <div class="pure-button-group margin-bottom-2" role="group">
                             <button class="pure-button pure-button-active pure-button-dark filter-phases" data-filter="listening">Listening</button>
                             <button class="pure-button pure-button-active pure-button-dark filter-phases" data-filter="visioning">Visioning</button>
                     </div>
-
-                    <h3>Filter data by geometry</h3>
-                    <div class="pure-button-group margin-bottom-2" role="group">
-                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="point">Points</button>
-                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="area">Areas</button>
-                    </div>
+                    -->
 
                     <h3>Filter Listening Phase data by feedback type</h3>
                      <div class="pure-button-group" role="group">
@@ -78,6 +74,13 @@
                             <button class="pure-button pure-button-active pure-button-error filter-types" data-filter="least-favorite">Least Favorite</button>
                             <button class="pure-button pure-button-active pure-button-primary filter-types" data-filter="future">Future</button>
                     </div>
+
+                    <h3>Filter data by geometry</h3>
+                    <div class="pure-button-group margin-bottom-2" role="group">
+                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="point">Points</button>
+                            <button class="pure-button pure-button-active pure-button-dark filter-geoms" data-filter="area">Areas</button>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -143,8 +146,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="data/cambridge_bounds.geojson.js"></script>
         <script src="data/listening_polyg.geojson.js"></script>
-        <script src="data/listening_pts.geojson.js"></script>
-        <script src="data/visioning_pts.geojson.js"></script>
+        <script src="data/engagement_points.geojson.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
