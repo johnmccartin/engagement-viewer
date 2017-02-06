@@ -258,7 +258,7 @@ function controlTheMap() {
 	$vectors.attr('data-geom-active',true).attr('data-type-active',true).attr('data-phase-active',true);
 	
 
-	$(document).on('click','.map-controls button', function() {
+	$(document).on('click','.map-controls .single-filter button', function() {
 		var $t = $(this);
 		var vectors = document.querySelectorAll('.leaflet-overlay-pane svg path')
 
@@ -372,7 +372,8 @@ function mobileControls() {
 		$('.mobile-map-controls').removeClass('not-revealed').addClass('revealed');
 	});
 
-	$(document).on('click','.mobile-map-controls span.close, .mobile-apply-filters',function(){
+	$(document).on('click','.mobile-map-controls span.close, .mobile-apply-filters',function(e){
+		e.preventDefault();
 		$('.mobile-map-controls').removeClass('revealed').addClass('not-revealed');
 	});
 
