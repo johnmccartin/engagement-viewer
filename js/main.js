@@ -83,8 +83,8 @@ function mapInit() {
 
 	function onEachFeature(feature, layer) {
 		var popUpContent = "";
-		if(feature.properties && feature.properties.PopupInfo) {
-			popUpContent = feature.properties.PopupInfo;
+		if(feature.properties && feature.properties.comments) {
+			popUpContent = feature.properties.comments;
 		} else {
 			popUpContent = "No comments."
 		}
