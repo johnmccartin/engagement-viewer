@@ -145,6 +145,7 @@ function mapInit() {
 			}
 	});
 
+	/*
 	var listening_points = new L.geoJSON(fire.listening_points,{
 			onEachFeature: onEachFeature,
 			pointToLayer: function(feature,latlng) {
@@ -187,6 +188,35 @@ function mapInit() {
 					color: "#222222",
 					weight: 0,
 					className: 'point visioning'
+				})
+			}
+	});
+	*/
+
+	var engagement_points = new L.geoJSON(fire.engagement_points,{
+			onEachFeature: onEachFeature,
+			pointToLayer: function(feature,latlng) {
+
+				var fill_color;
+				var feature_type = feature.properties.type;
+				var feature_type_class = slugify(feature_type)
+
+				if (feature_type == 'Favorite') {
+					fill_color = "#00ff72";
+				} else if (feature_type == 'Least Favorite') {
+					fill_color = "#ff3550"
+				} else if (feature_type == 'Future') {
+					fill_color = "#3859ff";
+				}
+
+
+				return L.circleMarker(latlng,{
+					radius: 3,
+					fillColor: fill_color,
+					fillOpacity: 0.5,
+					color: fill_color,
+					weight: 0,
+					className: 'point '+feature_type_class
 				})
 			}
 	});
