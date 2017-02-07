@@ -12,9 +12,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
 
 
          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
@@ -52,7 +50,7 @@
                 <a href="#" class="pull-right reveal-about pointer">About</a>
             </div>
 
-            <div class="left-pane stretch-tb pure-u-1 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-5 padding-2 not-mobile">
+            <div class="left-pane stretch-tb pure-u-1 pure-u-md-1-3 pure-u-lg-1-3 pure-u-xl-1-5 padding-2 not-mobile">
                 <a href="http://envision.cambridgema.gov"><img src="img/logo.png" class="pure-img" /></a>
                 <h1>Engagement Data</h1>
                 <p>What are the people of Cambridge's favorite and least favorite places, and where do they want to see change?</p>
@@ -86,7 +84,7 @@
             </div>
 
 
-            <div class="right-pane pure-u-1 pure-u-md-2-3 pure-u-lg-3-4 pure-u-xl-4-5">
+            <div class="right-pane pure-u-1 pure-u-md-2-3 pure-u-lg-2-3 pure-u-xl-4-5">
                 <div class="map-pane" id="map"></div>
             </div>
 
@@ -103,26 +101,24 @@
                     <span class="close pointer pull-right">Close</span>
 
                     <div class="reader">
-                        <p class="margin-top-2"><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our <a href="#">Mobile Engagement Station</a>.</p>
-                        <p>We asked participants to mark their favorite and least favorite places, and where they would like to see change in the future.</p>
+                        <p class="margin-top-2"><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our Mobile Engagement Station, a giant table made to look like the map of Cambridge.</p>
+                        <img class="pure-img" src="img/mobile_engagement.jpg" />
+                        <p>We asked participants to mark their favorite and least favorite places, and where they would like to see change in the future in green, red, and blue, respectively. We then photographed the marked up table and recorded that data using GIS (geographic information systems).</p>
                     </div>
             </div>
 
             <div class="mobile-about-pane not-revealed padding-1 mobile-only text-fix stretch-all">
                     <span class="pull-right close pointer">Close</span>
-                    <p class="margin-top-2"><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our <a href="#">Mobile Engagement Station</a>.</p>
-                        <p>We asked participants to mark their favorite and least favorite places, and where they would like to see change in the future.</p>
+                    <p class="margin-top-2"><a href="http://envision.cambridgema.gov">Envision Cambridge</a> spent its first year collecting feedback using our Mobile Engagement Station, a giant table made to look like the map of Cambridge.</p>
+                        <img class="pure-img" src="img/mobile_engagement.jpg" />
+                        <p>We asked participants to mark their favorite and least favorite places, and where they would like to see change in the future in green, red, and blue, respectively. We then photographed the marked up table and recorded that data using GIS (geographic information systems).</p>
+                    <small>
+                        Note: not all participants included comments. Some comments on areas are not viewable in this visualization. Please consult the Open Data to review all comments.
+                    </small>
             </div>
 
             <div class="map-controls mobile-map-controls not-revealed padding-1 mobile-only text-fix stretch-all">
                     <span class="pull-right close pointer">Close</span>
-                    <!--
-                    <h3 class="margin-top-1">Filter data by phase</h3>
-                    <div class="pure-button-group margin-bottom-2" role="group">
-                            <button class="pure-button pure-button-active pure-button-dark filter-phases" data-filter="listening">Listening</button>
-                            <button class="pure-button pure-button-active pure-button-dark filter-phases" data-filter="visioning">Visioning</button>
-                    </div>
-                    -->
 
                     <h3>Filter data by feedback type</h3>
                      <div class="pure-button-group" role="group">

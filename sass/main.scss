@@ -392,7 +392,11 @@ h1,h2 {
 
 .desktop-about-pane {
   display: none;
+  overflow: auto;
 }
 
+.mobile-about-pane {
+  overflow: auto;
+}
 
 @import 'queries';
