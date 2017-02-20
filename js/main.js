@@ -4,6 +4,7 @@ $(document).ready(function(){
 	setSizes();
 	mapInit();
 	mobileControls();
+	fire.user_used_toggle = false;
 
 
 	$('.content img').addClass('pure-img');
@@ -200,7 +201,20 @@ function controlTheMap() {
 	var vectors = document.querySelectorAll('.leaflet-overlay-pane svg path')
 	
 	$vectors.attr('data-geom-active',true).attr('data-type-active',true).attr('data-phase-active',true);
-	
+
+	$('.map-controls .single-filter input[type="checkbox"]').on('change',function(){
+
+		var $checkbox = $(this);
+		var $button = $checkbox.parent().find('button');
+		fire.user_used_toggle = true;
+
+		$button.trigger('click');
+
+		
+
+
+	});
+
 
 	$(document).on('click','.map-controls .single-filter button', function() {
 		var $t = $(this);
@@ -210,7 +224,12 @@ function controlTheMap() {
 		var filter_value = $t.attr('data-filter');
 
 		var $checkbox = $t.parent().find('input');
-		$checkbox.prop('checked',!$checkbox.prop('checked'));
+
+		if(fire.user_used_toggle == false) {
+			$checkbox.prop('checked',!$checkbox.prop('checked'));
+		}
+		fire.user_used_toggle = false;
+		console.log(fire.user_used_toggle);
 
 
 		//TURNING OFF
