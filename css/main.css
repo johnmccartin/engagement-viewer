@@ -201,62 +201,62 @@ __   ____ _ _ __(_) __ _| |__ | | ___  ___
   box-shadow: none;
 }
 
-/* line 12, ../sass/_button.scss */
+/* line 11, ../sass/_button.scss */
 .pure-button-active.pure-button-primary, .pure-button-active.pure-button-success, .pure-button-active.pure-button-error, .pure-button-active.pure-button-warning, .pure-button-active.pure-button-secondary, .pure-button-active.pure-button-dark {
   color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 24, ../sass/_button.scss */
+/* line 23, ../sass/_button.scss */
 .pure-button-active.pure-button-primary {
-  background: #0078e7;
+  background: #3859ff;
 }
-/* line 28, ../sass/_button.scss */
+/* line 27, ../sass/_button.scss */
 .pure-button-active.pure-button-success {
-  background: #1cb841;
+  background: #00cc5b;
   /* this is a green */
 }
-/* line 32, ../sass/_button.scss */
+/* line 31, ../sass/_button.scss */
 .pure-button-active.pure-button-error {
-  background: #ca3c3c;
+  background: #ff3550;
   /* this is a maroon */
 }
-/* line 36, ../sass/_button.scss */
+/* line 35, ../sass/_button.scss */
 .pure-button-active.pure-button-warning {
   background: #df7514;
   /* this is an orange */
 }
-/* line 40, ../sass/_button.scss */
+/* line 39, ../sass/_button.scss */
 .pure-button-active.pure-button-secondary {
   background: #42b8dd;
   /* this is a light blue */
 }
-/* line 43, ../sass/_button.scss */
+/* line 42, ../sass/_button.scss */
 .pure-button-active.pure-button-dark {
   background: #444;
 }
 
-/* line 53, ../sass/_button.scss */
+/* line 52, ../sass/_button.scss */
 .pure-button-xxsmall {
   font-size: 50%;
 }
 
-/* line 57, ../sass/_button.scss */
+/* line 56, ../sass/_button.scss */
 .pure-button-xsmall {
   font-size: 70%;
 }
 
-/* line 61, ../sass/_button.scss */
+/* line 60, ../sass/_button.scss */
 .pure-button-small {
   font-size: 85%;
 }
 
-/* line 65, ../sass/_button.scss */
+/* line 64, ../sass/_button.scss */
 .pure-button-large {
   font-size: 110%;
 }
 
-/* line 69, ../sass/_button.scss */
+/* line 68, ../sass/_button.scss */
 .pure-button-xlarge {
   font-size: 125%;
 }
@@ -684,7 +684,7 @@ input[type="checkbox"]:checked {
   z-index: -99997;
 }
 
-/* line 162, ../sass/main.scss */
+/* line 165, ../sass/main.scss */
 html, body {
   height: 100%;
   width: 100%;
@@ -694,67 +694,67 @@ html, body {
   left: 0;
 }
 
-/* line 171, ../sass/main.scss */
+/* line 174, ../sass/main.scss */
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   font-family: "Monotype Grotesque W01", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 176, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 ::selection {
   background: #198DBC;
   color: #fff;
 }
 
-/* line 180, ../sass/main.scss */
+/* line 183, ../sass/main.scss */
 ::-moz-selection {
   background: #198DBC;
   color: #fff;
 }
 
-/* line 185, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 body {
   color: #222;
 }
 
-/* line 188, ../sass/main.scss */
+/* line 191, ../sass/main.scss */
 a {
   color: #222;
 }
 
-/* line 192, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 a:hover {
   background: #198DBC;
   color: #fff;
   text-decoration: none;
 }
 
-/* line 198, ../sass/main.scss */
+/* line 201, ../sass/main.scss */
 .link-on-dark {
   color: #fff;
 }
 
-/* line 202, ../sass/main.scss */
+/* line 205, ../sass/main.scss */
 .link-no-decor {
   text-decoration: none;
 }
 
-/* line 206, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 .image-link {
   text-decoration: none;
 }
-/* line 210, ../sass/main.scss */
+/* line 213, ../sass/main.scss */
 .image-link:hover {
   background: transparent;
   color: none;
 }
 
-/* line 217, ../sass/main.scss */
+/* line 220, ../sass/main.scss */
 h1, h2 {
   font-family: "Sentinel A", "Sentinel B", Georgia, Palatino, serif;
 }
 
-/* line 222, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 .pure-g > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -762,7 +762,7 @@ h1, h2 {
   box-sizing: border-box;
 }
 
-/* line 229, ../sass/main.scss */
+/* line 232, ../sass/main.scss */
 .layout {
   min-height: 100%;
   position: relative;
@@ -771,14 +771,14 @@ h1, h2 {
   left: 0;
 }
 
-/* line 237, ../sass/main.scss */
+/* line 240, ../sass/main.scss */
 .right-pane {
   height: calc(100vh - 2.5em);
   margin-top: 2.5em;
   position: fixed;
 }
 
-/* line 243, ../sass/main.scss */
+/* line 246, ../sass/main.scss */
 .left-pane {
   position: relative;
   z-index: 100;
@@ -786,44 +786,44 @@ h1, h2 {
   overflow: auto;
 }
 
-/* line 250, ../sass/main.scss */
+/* line 253, ../sass/main.scss */
 .right-pane {
   z-index: 0;
 }
 
-/* line 256, ../sass/main.scss */
+/* line 259, ../sass/main.scss */
 .reader {
   max-width: 650px;
   margin: 0px auto;
 }
 
-/* line 265, ../sass/main.scss */
+/* line 268, ../sass/main.scss */
 .brand-title {
   font-size: 2.3em;
 }
 
-/* line 271, ../sass/main.scss */
+/* line 274, ../sass/main.scss */
 .map-pane {
   width: 100%;
   height: calc(100vh - 2.5em);
 }
 
-/* line 276, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 .geom-hidden {
   visibility: hidden;
 }
 
-/* line 281, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 .map-controls h3 {
   margin-bottom: 0.5em;
 }
-/* line 285, ../sass/main.scss */
+/* line 288, ../sass/main.scss */
 .map-controls .pure-button-group button {
   margin-bottom: .5em;
   font-size: .8em;
 }
 
-/* line 292, ../sass/main.scss */
+/* line 295, ../sass/main.scss */
 .mobile-nav {
   height: 2.5em;
   box-shadow: 0px 1px 7px -1px #333;
@@ -831,20 +831,20 @@ h1, h2 {
   position: relative;
   background: #fff;
 }
-/* line 299, ../sass/main.scss */
+/* line 302, ../sass/main.scss */
 .mobile-nav a.image-link {
   margin: .5em 0 0 .5em;
 }
-/* line 303, ../sass/main.scss */
+/* line 306, ../sass/main.scss */
 .mobile-nav a.image-link .logo {
   height: calc(2.5em - 1em);
 }
-/* line 308, ../sass/main.scss */
+/* line 311, ../sass/main.scss */
 .mobile-nav a:last-of-type {
   margin: .65em .5em 0 0;
 }
 
-/* line 315, ../sass/main.scss */
+/* line 318, ../sass/main.scss */
 .reveal-mobile-filters {
   width: 3em;
   height: 3em;
@@ -853,18 +853,18 @@ h1, h2 {
   z-index: 800;
   background: #198DBC;
 }
-/* line 323, ../sass/main.scss */
+/* line 326, ../sass/main.scss */
 .reveal-mobile-filters svg {
   width: 50%;
   margin: .75em 0 0 .75em;
 }
 
-/* line 330, ../sass/main.scss */
+/* line 333, ../sass/main.scss */
 .map-controls input {
   margin-right: .75em;
 }
 
-/* line 334, ../sass/main.scss */
+/* line 337, ../sass/main.scss */
 .mobile-map-controls {
   position: absolute;
   transition: all .4s ease;
@@ -872,16 +872,16 @@ h1, h2 {
   z-index: 801;
   left: 0;
 }
-/* line 342, ../sass/main.scss */
+/* line 345, ../sass/main.scss */
 .mobile-map-controls.not-revealed {
   top: 101%;
 }
-/* line 346, ../sass/main.scss */
+/* line 349, ../sass/main.scss */
 .mobile-map-controls.revealed {
   top: 0%;
 }
 
-/* line 352, ../sass/main.scss */
+/* line 355, ../sass/main.scss */
 .mobile-about-pane {
   position: absolute;
   transition: all .4s ease;
@@ -891,25 +891,25 @@ h1, h2 {
   background: #198DBC;
   color: #fff;
 }
-/* line 361, ../sass/main.scss */
+/* line 364, ../sass/main.scss */
 .mobile-about-pane a {
   color: #fff;
 }
-/* line 366, ../sass/main.scss */
+/* line 369, ../sass/main.scss */
 .mobile-about-pane.not-revealed {
   top: 101%;
 }
-/* line 370, ../sass/main.scss */
+/* line 373, ../sass/main.scss */
 .mobile-about-pane.revealed {
   top: 0%;
 }
 
-/* line 377, ../sass/main.scss */
+/* line 380, ../sass/main.scss */
 .drop-shadow {
   box-shadow: 0 0 10px 0 #666;
 }
 
-/* line 381, ../sass/main.scss */
+/* line 384, ../sass/main.scss */
 .text-fix {
   letter-spacing: normal;
   word-spacing: normal;
@@ -917,20 +917,25 @@ h1, h2 {
   font-family: "Monotype Grotesque W01", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 389, ../sass/main.scss */
+/* line 392, ../sass/main.scss */
 .pointer {
   cursor: pointer;
 }
 
-/* line 393, ../sass/main.scss */
+/* line 396, ../sass/main.scss */
 .desktop-about-pane {
   display: none;
   overflow: auto;
 }
 
-/* line 398, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 .mobile-about-pane {
   overflow: auto;
+}
+
+/* line 405, ../sass/main.scss */
+input:focus {
+  outline: 0;
 }
 
 /* line 1, ../sass/_queries.scss */

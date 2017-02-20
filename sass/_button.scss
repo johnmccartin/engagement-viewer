@@ -8,7 +8,6 @@
 }
 
 .pure-button-active {
-
     &.pure-button-primary,
     &.pure-button-success,
     &.pure-button-error,
@@ -22,15 +21,15 @@
 
 
     &.pure-button-primary {
-        background: #0078e7;
+        background: $future-blue;
     }
 
     &.pure-button-success {
-        background: rgb(28, 184, 65); /* this is a green */
+        background: darken($fav-green,10%); /* this is a green */
     }
 
     &.pure-button-error {
-        background: rgb(202, 60, 60); /* this is a maroon */
+        background: $leastfav-red; /* this is a maroon */
     }
 
     &.pure-button-warning {
