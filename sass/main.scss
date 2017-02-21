@@ -114,6 +114,9 @@ $light-blue: #8FD8F9;
 $med-blue: #198DBC;
 $black: #000;
 $white: #FFF;
+$fav-green: #00ff72;
+$leastfav-red: #ff3550;
+$future-blue: #3859ff;
 
 
 
@@ -397,6 +400,10 @@ h1,h2 {
 
 .mobile-about-pane {
   overflow: auto;
+}
+
+input:focus {
+  outline: 0;
 }
 
 @import 'queries';

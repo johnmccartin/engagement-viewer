@@ -4,6 +4,7 @@ $(document).ready(function(){
 	setSizes();
 	mapInit();
 	mobileControls();
+	fire.user_used_toggle = false;
 
 
 	$('.content img').addClass('pure-img');
@@ -110,12 +111,6 @@ function mapInit() {
 		bounds_latlng.push(new L.LatLng(bounds_coords[index][1], bounds_coords[index][0]))
 	});
 
-	//L.mask(bounds_latlng).addTo(map);
-
-	
-
-
-
 
 	var listening_polygons = new L.geoJSON(fire.listening_polygons,{
 			onEachFeature: onEachFeature,
@@ -144,54 +139,6 @@ function mapInit() {
 				
 			}
 	});
-
-	/*
-	var listening_points = new L.geoJSON(fire.listening_points,{
-			onEachFeature: onEachFeature,
-			pointToLayer: function(feature,latlng) {
-
-				var fill_color;
-				var feature_type = feature.properties.Type;
-				var feature_type_class = slugify(feature_type)
-
-				if (feature_type == 'Favorite') {
-					fill_color = "#00ff72";
-				} else if (feature_type == 'Least Favorite') {
-					fill_color = "#ff3550"
-				} else if (feature_type == 'Future') {
-					fill_color = "#3859ff";
-				}
-
-
-				return L.circleMarker(latlng,{
-					radius: 3,
-					fillColor: fill_color,
-					fillOpacity: 0.5,
-					color: fill_color,
-					weight: 0,
-					className: 'point listening '+feature_type_class
-				})
-			}
-	});
-
-
-	var visioning_points = new L.geoJSON(fire.visioning_points,{
-			onEachFeature: onEachFeature,
-			pointToLayer: function(feature,latlng) {
-
-
-
-				return L.circleMarker(latlng,{
-					radius: 3,
-					fillColor: "#222222",
-					fillOpacity: 0.6,
-					color: "#222222",
-					weight: 0,
-					className: 'point visioning'
-				})
-			}
-	});
-	*/
 
 	var engagement_points = new L.geoJSON(fire.engagement_points,{
 			onEachFeature: onEachFeature,
@@ -225,8 +172,6 @@ function mapInit() {
 	map.addLayer(tiles);
 	map.addLayer(cambridge_bounds);
 	map.addLayer(listening_polygons);
-	//map.addLayer(listening_points);
-	//map.addLayer(visioning_points);
 	map.addLayer(engagement_points);
 
 	map.createPane('labels');
@@ -256,7 +201,20 @@ function controlTheMap() {
 	var vectors = document.querySelectorAll('.leaflet-overlay-pane svg path')
 	
 	$vectors.attr('data-geom-active',true).attr('data-type-active',true).attr('data-phase-active',true);
-	
+
+	$('.map-controls .single-filter input[type="checkbox"]').on('change',function(){
+
+		var $checkbox = $(this);
+		var $button = $checkbox.parent().find('button');
+		fire.user_used_toggle = true;
+
+		$button.trigger('click');
+
+		
+
+
+	});
+
 
 	$(document).on('click','.map-controls .single-filter button', function() {
 		var $t = $(this);
@@ -266,7 +224,12 @@ function controlTheMap() {
 		var filter_value = $t.attr('data-filter');
 
 		var $checkbox = $t.parent().find('input');
-		$checkbox.prop('checked',!$checkbox.prop('checked'));
+
+		if(fire.user_used_toggle == false) {
+			$checkbox.prop('checked',!$checkbox.prop('checked'));
+		}
+		fire.user_used_toggle = false;
+		console.log(fire.user_used_toggle);
 
 
 		//TURNING OFF
@@ -331,11 +294,7 @@ function controlTheMap() {
 		}
 
 
-
-
 	});
-
-
 
 }
 
@@ -384,8 +343,6 @@ function mobileControls() {
 	$(document).on('click','.mobile-about-pane span.close',function(){
 		$('.mobile-about-pane').removeClass('revealed').addClass('not-revealed');
 	});
-
-
 
 
 }
