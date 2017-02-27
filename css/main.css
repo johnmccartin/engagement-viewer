@@ -917,23 +917,28 @@ h1, h2 {
   font-family: "Monotype Grotesque W01", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 392, ../sass/main.scss */
+/* line 391, ../sass/main.scss */
+.qualifications {
+  width: 80%;
+}
+
+/* line 395, ../sass/main.scss */
 .pointer {
   cursor: pointer;
 }
 
-/* line 396, ../sass/main.scss */
+/* line 399, ../sass/main.scss */
 .desktop-about-pane {
   display: none;
   overflow: auto;
 }
 
-/* line 401, ../sass/main.scss */
+/* line 404, ../sass/main.scss */
 .mobile-about-pane {
   overflow: auto;
 }
 
-/* line 405, ../sass/main.scss */
+/* line 408, ../sass/main.scss */
 input:focus {
   outline: 0;
 }
